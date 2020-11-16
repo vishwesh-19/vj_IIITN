@@ -29,4 +29,6 @@ def clicked():
  
 btn = ttk.Button(window ,text="Seek Help" ,command="clicked()").grid(row=4,column=0)
 btn.pack()
+
+if 
 window.mainloop()
