@@ -1,0 +1,47 @@
+<html>
+   <head>
+       <title>Sign Up Page</title>
+       <script type = "text/javascript">
+         function calculate()
+         {
+            var currency = Currency.curr[Currency.curr.selectedIndex].value;
+            var amt = Currency.amount.value;
+            if(Currency.conv[0].checked)
+            {
+               Currency.converted.value = amt / currency;
+            }
+            else 
+            {
+               Currency.converted.value = amt * currency;
+            }
+         }
+       </script>
+   </head>
+   <body>
+      <br>
+      <center><font size=14 style="calibri">Currency Converter(Dollar to Others and Vice-versa )</font>
+      <br><br><br><br>
+      <form name="Currency" method="POST">
+        <label for="curr"> Select Currency :  </label>
+        <Select name="curr">
+          <option value="75.07">Rupee, India
+          <option value="0.84">Euro, 19 EU Countries
+          <option value="0.72">Pound Sterling, United Kingdom
+          <option value="75.54">Ruble, Russia
+          <option value="108.98">Yen, Japan
+         </Select>
+         <br><br>
+         <input type="radio" name="conv">&nbsp Others to Dollar
+         <input type="radio" name="conv">&nbsp Dollar to Others
+         <br><br>
+         <label for="amount">Enter Amount : </label>
+         <input type="text" name="amount">
+         <br><br>
+         <input type="button" name="conv" value="Convert" onclick="calculate()">
+         <br><br>
+         <label for="converted">Converted Value : </label>
+         <input type="text" name="converted">
+     </center>
+      </form>
+   </body>
+</html>
